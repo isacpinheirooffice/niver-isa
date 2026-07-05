@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a74fff, #d1bff3);
+    padding: 40px 20px;
+}
+
+.pagina-surpresa {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(135deg, rgb(177 103 255 / 0.82), #a49bc1);
+    color: #41024f;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.55);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.galeria figure {
+    background: #d1bff3;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.65);
+    position: relative;
+    cursor: pointer;
+    height: 260px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria figcaption {
+    padding: 12px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.mensagem-final {
+    background: linear-gradient(135deg, #a74fff, #a599c7);
+    padding: 25px;
+    border-radius: 15px;
+    color: #ffffff;
+    line-height: 1.7;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.62);
+}
+
+.capa {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #a74fff, #a599c7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.conteudo-revelado {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-revelado img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.conteudo-revelado figcaption {
+    padding: 12px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.foto-card.revelada .capa {
+    opacity: 0;
+    transform: scale(2) rotate(15deg);
+    pointer-events: none;
+}
+.foto-card.tremendo .capa {
+    animation: tremer 0.3s ease;
+}
+
+@keyframes tremer {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px) rotate(-2deg); }
+    75% { transform: translateX(4px) rotate(2deg); }
+}
+.confete {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 1000;
+    animation: explodirConfete 1s ease-out forwards;
+}
+
+@keyframes explodirConfete {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--destino-x), var(--destino-y)) rotate(720deg);
+        opacity: 0;
+    }
+}
