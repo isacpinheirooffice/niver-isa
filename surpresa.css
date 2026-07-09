@@ -69,6 +69,8 @@ h1 {
     color: #ffffff;
     line-height: 1.7;
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.62);
+    font-family: 'Fredoka', cursive;
+    font-size: 0.95rem;
 }
 
 .capa {
