@@ -1,3 +1,28 @@
+const fundo = document.getElementById('fundo-animado');
+const coresFesta = ['#957dc3', 'rgb(0 0 0 / 0.55)', 'rgb(177 103 255 / 0.82)', '#4d96ff', '#c230ea', '#ffffff'];
+
+for (let i = 0; i < 40; i++) {
+    const balao = document.createElement('div');
+    balao.classList.add('balao');
+    const tamanho = 20 + Math.random() * 30;
+    balao.style.width = tamanho + 'px';
+    balao.style.height = tamanho * 1.3 + 'px';
+    balao.style.left = Math.random() * 100 + 'vw';
+    balao.style.background = coresFesta[Math.floor(Math.random() * coresFesta.length)];
+    balao.style.animationDuration = (8 + Math.random() * 10) + 's';
+    balao.style.animationDelay = '-' + (Math.random() * 10) + 's';
+    fundo.appendChild(balao);
+}
+
+for (let i = 0; i < 25; i++) {
+    const confete = document.createElement('div');
+    confete.classList.add('confete-fundo');
+    confete.style.left = Math.random() * 100 + 'vw';
+    confete.style.background = coresFesta[Math.floor(Math.random() * coresFesta.length)];
+    confete.style.animationDuration = (4 + Math.random() * 4) + 's';
+    confete.style.animationDelay = '-' + (Math.random() * 8) + 's';
+    fundo.appendChild(confete);
+}
 const cards = document.querySelectorAll('.foto-card');
 
     cards.forEach(function(card) {
@@ -53,3 +78,26 @@ function dispararConfetes(card) {
         }, 1000);
     }
 }
+const cardMensagem = document.querySelector('.mensagem-final-card');
+let cliquesMensagem = 0;
+const cliquesNecessariosMensagem = parseInt(cardMensagem.dataset.cliquesNecessarios);
+const contadorMensagem = cardMensagem.querySelector('.contador-capa');
+
+cardMensagem.addEventListener('click', function() {
+    if (cardMensagem.classList.contains('revelada')) {
+        return;
+    }
+
+    cliquesMensagem++;
+    contadorMensagem.textContent = `${cliquesMensagem}/${cliquesNecessariosMensagem}`;
+
+    if (cliquesMensagem < cliquesNecessariosMensagem) {
+        cardMensagem.classList.add('tremendo');
+        setTimeout(function() {
+            cardMensagem.classList.remove('tremendo');
+        }, 300);
+    } else {
+        cardMensagem.classList.add('revelada');
+        dispararConfetes(cardMensagem);
+    }
+});

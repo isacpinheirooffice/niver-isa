@@ -6,7 +6,6 @@ seletor {
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -14,6 +13,13 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #a74fff, #d1bff3);
+}
+.fundo-animado {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
 }
 .container {
     background: #ffffff;
@@ -23,15 +29,15 @@ body {
     box-shadow: 0 10px 30px rgb(0 0 0 / 0.62);
     max-width: 500px;
     animation: aparecer 1s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
-
 h1 {
     font-family: 'Chewy', cursive;
     color: #41024f;
     margin-bottom: 20px;
     font-size: 2rem;
 }
-
 .mensagem {
     color: #555;
     line-height: 1.6;
@@ -44,7 +50,6 @@ h1 {
     border-radius: 15px;
     margin-bottom: 20px;
 }
-
 #botao-surpresa {
     background: #c230ea;
     color: white;
@@ -57,10 +62,12 @@ h1 {
     position: fixed;
     z-index: 999;
 }
-
 #botao-surpresa:hover {
     background: #c230ea;
-    transform: scale(1.05);
+    transform: scale(1.15);
+}
+#botao-surpresa:active {
+    transform: scale(0.9);
 }
 @keyframes aparecer {
     from {
@@ -79,4 +86,21 @@ h1 {
         max-width: 80vw;
         text-align: center;
     }
+}
+.interrogacao {
+    position: absolute;
+    bottom: -60px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    animation: subir linear infinite;
+}
+@keyframes subir {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(-110vh) rotate(15deg); }
+}
+.interrogacao {
+    position: absolute;
+    bottom: -60px;
+    font-weight: bold;
+    animation: subir linear infinite;
 }
