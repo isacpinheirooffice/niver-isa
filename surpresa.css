@@ -25,6 +25,7 @@ h1 {
     font-size: 2.2rem;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, rgb(177 103 255 / 0.82), #a49bc1);
 }
 
 .intro {
@@ -72,7 +73,7 @@ h1 {
     color: #ffffff;
     line-height: 1.7;
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.65);
-    font-family: 'Fredoka', cursive;
+    font-family: 'Poppins', cursive;
     font-size: 0.95rem;
     overflow: hidden;
 }
