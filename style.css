@@ -33,7 +33,7 @@ body {
     z-index: 1;
 }
 h1 {
-    font-family: 'Poppins', cursive;
+    font-family: 'Poppins', sans-serif;
     color: #41024f;
     margin-bottom: 20px;
     font-size: 2rem;
@@ -42,7 +42,7 @@ h1 {
     color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
-    font-family:'Fredoka', sans-serif;;
+    font-family:'Poppins', sans-serif;;
 }
 .foto {
     width: 100%;

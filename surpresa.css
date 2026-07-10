@@ -24,15 +24,17 @@ h1 {
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.55);
     font-size: 2.2rem;
     margin-bottom: 20px;
-    font-family: 'SansSerif', "Segoe UI";
+    font-family: 'Poppins', sans-serif;
 }
 .intro {
-    color: #ffffff;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgb(0 0 0 / 0.55);
-    overflow: hidden;
     background: linear-gradient(135deg, rgb(177 103 255 / 0.82), #a49bc1);
+    color: #ffffff;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.55);
+    font-size: large;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .galeria {
@@ -43,7 +45,7 @@ h1 {
 }
 
 .galeria figure {
-    background: #d1bff3;
+    background: #a599c7;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.65);
@@ -72,7 +74,7 @@ h1 {
     color: #ffffff;
     line-height: 1.7;
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.65);
-    font-family: Constantia ;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
     overflow: hidden;
 }
@@ -152,8 +154,8 @@ h1 {
 
 .conteudo-revelado figcaption {
     padding: 12px;
-    color: #555;
-    font-size: 0.9rem;
+    color: #ffffff;
+    font-size: 0.8rem;
 }
 .foto-card {
     transition: transform 0.2s ease;
