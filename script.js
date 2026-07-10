@@ -17,6 +17,18 @@ for (let i = 0; i < 30; i++) {
 let cliques = 0;
 const totalCliques = 16;
 
+function posicionarBotaoInicial() {
+    const container = document.querySelector('.container');
+    const rect = container.getBoundingClientRect();
+
+    botao.style.top = (rect.bottom + 20) + 'px';
+    botao.style.left = '50%';
+    botao.style.transform = 'translateX(-50%)';
+}
+
+window.addEventListener('load', posicionarBotaoInicial);
+
+
 function moverBotao() {
     const larguraJanela = window.innerWidth;
     const alturaJanela = window.innerHeight;
@@ -26,6 +38,7 @@ function moverBotao() {
     const novoX = Math.random() * (larguraJanela - larguraBotao);
     const novoY = Math.random() * (alturaJanela - alturaBotao);
 
+    botao.style.transform = 'none';
     botao.style.left = novoX + 'px';
     botao.style.top = novoY + 'px';
 }
