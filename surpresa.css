@@ -24,16 +24,15 @@ h1 {
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.55);
     font-size: 2.2rem;
     margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, rgb(177 103 255 / 0.82), #a49bc1);
+    font-family: 'SansSerif', "Segoe UI";
 }
-
 .intro {
     color: #ffffff;
     margin-bottom: 30px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.55);
     overflow: hidden;
+    background: linear-gradient(135deg, rgb(177 103 255 / 0.82), #a49bc1);
 }
 
 .galeria {
@@ -73,7 +72,7 @@ h1 {
     color: #ffffff;
     line-height: 1.7;
     box-shadow: 0 8px 20px rgb(0 0 0 / 0.65);
-    font-family: 'Poppins', cursive;
+    font-family: Constantia ;
     font-size: 0.95rem;
     overflow: hidden;
 }
